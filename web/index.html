@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .chat-container {
+      width: 400px;
+      height: 500px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .chat-box {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      background: #fafafa;
+    }
+
+    .chat-box p {
+      margin: 6px 0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      max-width: 75%;
+      word-wrap: break-word;
+    }
+
+    .chat-box .server {
+      background: #eee;
+      color: #555;
+      align-self: center;
+      font-style: italic;
+    }
+
+    .chat-box .me {
+      background: #4a90e2;
+      color: white;
+      margin-left: auto;
+    }
+
+    .chat-box .other {
+      background: #ddd;
+      color: #333;
+      margin-right: auto;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    .chat-input input {
+      flex: 1;
+      border: none;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    .chat-input button {
+      background: #4a90e2;
+      border: none;
+      color: white;
+      padding: 12px 18px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .chat-input button:hover {
+      background: #357abd;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">💬 Web Chat</div>
+    <div id="chat" class="chat-box"></div>
+    <div class="chat-input">
+      <input id="msg" placeholder="Type a message..." onkeypress="if(event.key==='Enter') sendMsg()">
+      <button onclick="sendMsg()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const ws = new WebSocket("ws://localhost:3000");
+
+    ws.onopen = () => {
+      addMessage("Connected to server!", "server");
+    };
+
+    ws.onmessage = (event) => {
+      addMessage(event.data, "other");
+    };
+
+    function sendMsg() {
+      let msg = document.getElementById("msg").value;
+      if (msg.trim() === "") return;
+      ws.send(msg);
+      addMessage(msg, "me");
+      document.getElementById("msg").value = "";
+    }
+
+    function addMessage(text, type) {
+      const chat = document.getElementById("chat");
+      const p = document.createElement("p");
+      p.className = type;
+      p.textContent = text;
+      chat.appendChild(p);
+      chat.scrollTop = chat.scrollHeight;
+    }
+  </script>
+</body>
+</html>

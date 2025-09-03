@@ -1,0 +1,21 @@
+[{
+  "file": "/home/harsh1695/tcpchatapplication/tcpchatapplication/serverchat/main.c",
+  "directory": "/home/harsh1695/tcpchatapplication/tcpchatapplication/serverchat",
+  "command": "/usr/bin/gcc -c /home/harsh1695/tcpchatapplication/tcpchatapplication/serverchat/main.c -o /home/harsh1695/tcpchatapplication/tcpchatapplication/serverchat/main.c.o -target x86_64-linux-gnu -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -O0  -gdwarf-2  -std=c99  -Wall"
+ }, {
+  "file": "/home/harsh1695/tcpchatapplication/tcpchatapplication/clientrefine/main.c",
+  "directory": "/home/harsh1695/tcpchatapplication/tcpchatapplication/clientrefine",
+  "command": "/usr/bin/gcc -c /home/harsh1695/tcpchatapplication/tcpchatapplication/clientrefine/main.c -o /home/harsh1695/tcpchatapplication/tcpchatapplication/clientrefine/main.c.o -target x86_64-linux-gnu -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -O0  -gdwarf-2  -std=c99  -Wall"
+ }, {
+  "file": "/home/harsh1695/tcpchatapplication/tcpchatapplication/serverrefine/main.c",
+  "directory": "/home/harsh1695/tcpchatapplication/tcpchatapplication/serverrefine",
+  "command": "/usr/bin/gcc -c /home/harsh1695/tcpchatapplication/tcpchatapplication/serverrefine/main.c -o /home/harsh1695/tcpchatapplication/tcpchatapplication/serverrefine/main.c.o -target x86_64-linux-gnu -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -O0  -gdwarf-2  -std=c99  -Wall"
+ }, {
+  "file": "/home/harsh1695/tcpchatapplication/tcpchatapplication/client/main.c",
+  "directory": "/home/harsh1695/tcpchatapplication/tcpchatapplication/client",
+  "command": "/usr/bin/gcc -c /home/harsh1695/tcpchatapplication/tcpchatapplication/client/main.c -o /home/harsh1695/tcpchatapplication/tcpchatapplication/client/main.c.o -target x86_64-linux-gnu -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -O0  -gdwarf-2  -std=c99  -Wall"
+ }, {
+  "file": "/home/harsh1695/tcpchatapplication/tcpchatapplication/server/main.c",
+  "directory": "/home/harsh1695/tcpchatapplication/tcpchatapplication/server",
+  "command": "/usr/bin/gcc -c /home/harsh1695/tcpchatapplication/tcpchatapplication/server/main.c -o /home/harsh1695/tcpchatapplication/tcpchatapplication/server/main.c.o -target x86_64-linux-gnu -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -O0  -gdwarf-2  -std=c99  -Wall"
+ }]
